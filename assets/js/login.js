@@ -58,7 +58,7 @@ $('#form_reg').on('submit', function (e) {
 $('#form_login').submit(function (e) {
     e.preventDefault()
     $.ajax({
-        url: 'http://api-breakingnews-web.itheima.net/api/login',
+        url: '/api/login',
         method: 'POST',
         //快速获取表单中的数据
         data: $(this).serialize(),
@@ -72,7 +72,7 @@ $('#form_login').submit(function (e) {
             //将登陆成功的token字符串，曹村到localStirage中
             localStorage.setItem('token', res.token)
             //跳转到后台主页
-            location.href = '/index/html'
+            location.href = "/project/index.html"
         }
     })
 })
